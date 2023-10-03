@@ -49,7 +49,6 @@ const tempWatchedData = [
 
 const average = (arr) =>
   arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
-
 export default function App() {
   const [movies, setMovies] = useState(tempMovieData);
   const [watched, setWatched] = useState(tempWatchedData);
@@ -68,8 +67,8 @@ export default function App() {
         </Box>
 
         <Box>
-            <WatchedSummary watched={watched} />
-            <WatchedMoviesList watched={watched} />
+          <WatchedSummary watched={watched} />
+          <WatchedMoviesList watched={watched} />
         </Box>
       </Main>
     </>
