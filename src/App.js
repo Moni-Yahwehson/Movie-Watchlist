@@ -72,7 +72,7 @@ export default function App() {
   // console.log("c");
 
   function handleSelectMovie(id) {
-    selectedId(id);
+    selectedId((selectedId) => (id === selectedId ? null : id));
   }
 
   function handleCloseMovie() {
