@@ -8,6 +8,7 @@ export function useKey(key, action) {
           action();
         }
       }
+
       document.addEventListener("keydown", callback);
 
       return function () {
