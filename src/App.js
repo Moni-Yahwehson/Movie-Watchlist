@@ -179,8 +179,6 @@ function Box({ children }) {
   );
 }
 
-
-
 function MovieList({ movies, onSelectMovie }) {
   <ul className="list">
     {movies?.map((movie) => (
@@ -213,6 +211,7 @@ function MovieDetail({ selectedId, onCloseMovie, onAddWatched, watched }) {
   const watchedUseRating = watched.find(
     (movie) => movie.imdbID === selectedId
   )?.userRating;
+
   const {
     Title: title,
     Year: year,
@@ -225,6 +224,11 @@ function MovieDetail({ selectedId, onCloseMovie, onAddWatched, watched }) {
     Director: director,
     Genre: genre,
   } = movie;
+
+  /*eslint-disable */
+  // if (imdbRating > 8) [isTop, setIsTop] = useState(true);
+
+  if(imdbRating > 8 ) return <p>Greatest ever!</p>
 
   function handleAdd() {
     const newWatchedMovie = {
