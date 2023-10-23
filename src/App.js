@@ -228,7 +228,9 @@ function MovieDetail({ selectedId, onCloseMovie, onAddWatched, watched }) {
   /*eslint-disable */
   // if (imdbRating > 8) [isTop, setIsTop] = useState(true);
 
-  if(imdbRating > 8 ) return <p>Greatest ever!</p>
+  // if(imdbRating > 8 ) return <p>Greatest ever!</p>
+
+  // const [avgRating, setAvgRating] = useState(0);
 
   function handleAdd() {
     const newWatchedMovie = {
